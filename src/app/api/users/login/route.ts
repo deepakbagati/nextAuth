@@ -21,7 +21,7 @@ export async function POST(request:NextRequest){
         //check if password is correct
 
         const validPassword = await bcryptjs.compare(password, user.password)
-        if(!validPassword){
+        if(!validPassword){r
             return NextResponse.json({error: "Invalid password"}, {status: 400})
         }
         console.log(user);
@@ -33,7 +33,7 @@ export async function POST(request:NextRequest){
             email:user.email,
             username:user.username
         }
-        const token =await jwt.sign(tokenData,process.env.TOKEN_SECRET !,{expiresIn:"1d"})
+        const token =await jwt.sign(tokenData,"ythgdfjytdfug",{expiresIn:"1d"})
 
         const response=NextResponse.json({
             message:"Login successful",
@@ -47,6 +47,6 @@ export async function POST(request:NextRequest){
         return response;
 }
     catch(error:any){
-            return NextResponse.json({error:error.message},{status:600})
+            return NextResponse.json({error:error.message},{status:400})
         }
 }
