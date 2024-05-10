@@ -58,7 +58,7 @@ export default function SignupPage() {
             />
         <label htmlFor="email">email</label>
         <input 
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+        className="p-4 border border-orange-300 rounded-lg mb-4  focus:border-white focus:outline-none  text-black"
             id="email"
             type="text"
             value={user.email}
@@ -67,7 +67,7 @@ export default function SignupPage() {
             />
         <label htmlFor="password">password</label>
         <input 
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+        className="p-4 border border-orange-300 rounded-lg mb-4 focus:outline-none focus:border-white text-black"
             id="password"
             type="password"
             value={user.password}
@@ -76,7 +76,7 @@ export default function SignupPage() {
             />
             <button
             onClick={onSignup}
-            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">{buttonDisabled ? "No signup" : "Signup"}</button>
+            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-white">{buttonDisabled ? "No signup" : "Signup"}</button>
             <Link href="/login">Visit login page</Link>
         </div>
     )
